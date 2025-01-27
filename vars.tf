@@ -1,11 +1,7 @@
-# Defining Public Key
-variable "public_key" {
-  default = "tests.pub"
-}
 
 # Defining Private Key
 variable "private_key" {
-  default = "tests.pem"
+  default = "aff-cs.pem"
 }
 
 # Definign Key Name for connection
@@ -16,7 +12,7 @@ variable "key_name" {
 
 # Defining Region
 variable "aws_region" {
-  default = "us-east-1"
+  default = "us-west-2"
 }
 
 # Defining CIDR Block for VPC
