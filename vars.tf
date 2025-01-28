@@ -1,7 +1,11 @@
+# Defining Public Key
+variable "public_key" {
+  default = "~/.ssh/aff-cs.pub"
+}
 
 # Defining Private Key
 variable "private_key" {
-  default = "aff-cs.pem"
+  default = "~/.ssh/aff-cs.pem"
 }
 
 # Definign Key Name for connection
