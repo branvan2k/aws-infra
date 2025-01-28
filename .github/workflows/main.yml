@@ -18,8 +18,8 @@ jobs:
 
       - name: Set environment variables
         run: |
-          echo "public_key=${{ secrets.AWS_PUBLIC_KEY }}" >> $GITHUB_ENV
-          echo "private_key=${{ secrets.AWS_PRIVATE_KEY }}" >> $GITHUB_ENV
+          printf "%s" "${{ secrets.AWS_PUBLIC_KEY }}" >> $GITHUB_ENV
+          printf "%s" "${{ secrets.AWS_PRIVATE_KEY }}" >> $GITHUB_ENV
 
       - name: Set up Terraform
         uses: hashicorp/setup-terraform@v1
