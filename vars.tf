@@ -17,7 +17,7 @@ variable "key_name" {
 
 # Defining Region
 variable "aws_region" {
-  default = "us-west-2"
+  default = "eu-north-1"
 }
 
 # Defining CIDR Block for VPC
@@ -38,14 +38,13 @@ variable "subnet1_cidr" {
 # Defining AMI
 variable "ami" {
   default = {
-    us-west-2 = "ami-0696e233fcd5f173e"
-    us-west-2 = "ami-0fa40e25bf4dda1f6"
+    eu-north-1 = "ami-0368b2c10d7184bc7"
   }
 }
 
 # Defining Instace Type
 variable "instancetype" {
-  default = "t2.medium"
+  default = "t3.micro"
 }
 
 # Defining Master count 
