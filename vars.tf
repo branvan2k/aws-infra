@@ -1,6 +1,7 @@
 # Defining Public Key
 variable "public_key" {
-  default = "aff-cs.pub"
+#  default = "aff-cs.pub"
+#  default = ${{ secrets.aws_public_key }}
 }
 
 # Defining Private Key

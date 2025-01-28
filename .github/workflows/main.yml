@@ -8,6 +8,7 @@ env:
   AWS_ACCESS_KEY_ID: ${{ secrets.aws_access_key }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.aws_secret_key }}
   AWS_SESSION_TOKEN: ${{ secrets.aws_session_token }}
+#  AWS_PUBLIC_KEY: ${{ secrets.aws_public_key }}
 jobs:
   build:
     name: build
@@ -28,5 +29,7 @@ jobs:
         run: terraform plan
       
       - name: Terraform Apply
+        env:
+          TF_VAR_public_key: ${{ secrets.AWS_PUBLIC_KEY }}
         id: apply
         run: terraform apply --auto-approve
