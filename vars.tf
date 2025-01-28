@@ -6,7 +6,7 @@ variable "public_key" {
 
 # Defining Private Key
 variable "private_key" {
-  default = "aff-cs.pem"
+#  default = "aff-cs.pem"
 }
 
 # Definign Key Name for connection

@@ -125,7 +125,7 @@ resource "aws_security_group" "demosg" {
 # Creating key pair
 resource "aws_key_pair" "demokey" {
   key_name   = "${var.key_name}"
-  public_key = "${file(var.public_key)}"
+  public_key = "${var.public_key}"
 }
   
 # Creating EC2 Instance
@@ -176,7 +176,7 @@ resource "aws_instance" "demoinstance" {
     # The default username for our AMI
     user = "ec2-user"
     # Private key for connection
-    private_key = "${file(var.private_key)}"
+    private_key = var.private_key
     # Type of connection
     type = "ssh"
   }
